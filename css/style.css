@@ -29,6 +29,7 @@ a {
 
 a:hover {
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 hr.border {
@@ -89,6 +90,7 @@ h3 {
 
 .btn-outline {
   background-color: white;
+  color: #5044d5;
   border: 1px solid #5044d5;
   padding: 10px;
   border-radius: 4px;
@@ -195,6 +197,10 @@ h3 {
   color: #152726;
 }
 
+.nav-item img {
+  vertical-align: center;
+}
+
 .nav-item:hover a {
   color: #5044d5;
   font-weight: 600;
@@ -228,6 +234,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+}
+
+.ft-main-item li:hover a {
+  color: #5044d5;
+  font-weight: 600;
 }
 
 .newsletter input[type="email"] {
