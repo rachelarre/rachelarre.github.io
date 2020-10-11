@@ -82,6 +82,12 @@ h3 {
   height: 64px;
 }
 
+.spacing-mdflex {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
 .no-pad {
   padding: 0px;
 }
