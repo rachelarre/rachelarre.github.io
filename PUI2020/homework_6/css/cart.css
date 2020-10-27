@@ -1,0 +1,62 @@
+/*Shopping Cart*/
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.cart-div {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product-col {
+  flex-basis: 300px;
+}
+
+.quantity-col {
+  flex-basis: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.price-col {
+  flex-basis: 200px;
+}
+
+/* Product Col UI*/
+
+.pillow {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 32px 32px 32px 0px;
+}
+
+.pillow-image {
+  margin-bottom: 8px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  max-width: 120px;
+}
+
+.pillow p {
+  font-size: 14px;
+  color: black;
+  padding: 4px 4px 4px 0px;
+}
+
+.pillow span {
+  font-weight: 600;
+}
+
+.pillow-details {
+  margin-left: 8px;
+}
+
+/* Quantity Col UI */

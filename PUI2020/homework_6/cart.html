@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fluff Stuff</title>
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links-left">
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="#">Collections</a></li>
+          <li class="nav-item"><a href="#">Pillow Builder</a></li>
+        </ul>
+
+        <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="fluffstuff logo" />
+        </a>
+
+        <ul class="nav-links-right">
+          <li class="nav-item"><a href="#">Account</a></li>
+          <li class="nav-item">
+            <a href="#">
+              <img src="assets/icon-shopping-cart.svg" alt="cart" />
+              Cart</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Below this point is unique page elements -->
+
+    <section class="section">
+      <div class="subheading">
+        <h2>Cart</h2>
+        <p>
+          Review your items. Pillow orders over $50 ship for free to the
+          continental U.S. in 3-5 business days—no code needed.
+        </p>
+      </div>
+    </section>
+
+    <hr class="border" />
+
+    <div class="spacing-md"></div>
+
+    <!-- Start of Cart Styling -->
+
+    <section class="cart">
+      <p class="label product-col">Product</p>
+      <p class="label quantity-col">Quantity</p>
+      <p class="label price-col">Price</p>
+    </section>
+
+    <div class="cart-div"><hr class="border" /></div>
+
+    <!-- I need to figure out how to add a cart item here -->
+
+    <section class="cart">
+      <div class="product-col">
+        <div class="pillow">
+          <a href="bed-pillow.html" class="">
+            <div class="pillow-image">
+              <img src="assets/product_gallery/bed-cozy.png" alt="" />
+            </div>
+          </a>
+
+          <div class="pillow-details">
+            <h3>Bed Pillow</h3>
+            <p><span>Color -</span> Cozy Denim</p>
+            <p><span>Fill -</span> Duck Down</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quantity-col">
+        <div class="pillow-details">
+          <div class="product-quantity">
+            <div class="btn-outline-qty">
+              <p><span>—</span></p>
+              <p id="itemQuantity">1</p>
+              <p><span>＋</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price-col">Price</div>
+    </section>
+
+    <!-- Empty state for the cart -->
+    <div class="spacing-md"></div>
+
+    <section class="section">
+      <p class="cart label">You have nothing in your cart.</p>
+    </section>
+
+    <section class="display-col cart section spacing-mdflex">
+      <p>Build a pillow with our custom pillow builder.</p>
+      <a href="fluffme.html" class="btn-outline btn-standard">Fluff Me</a>
+    </section>
+
+    <div class="spacing-md"></div>
+
+    <div class="cart-div"><hr class="border" /></div>
+
+    <!-- Above this point is unique page elements -->
+
+    <div class="spacing-lg"><h6></h6></div>
+
+    <footer>
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="bed-pillow.html">Bed</a></li>
+            <li><a href="floor-pillow.html">Floor</a></li>
+            <li><a href="couch-pillow.html">Couch</a></li>
+            <li><a href="round-pillow.html">Round</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our workshop</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h3>Contact us</h3>
+          <ul>
+            <li><a href="#">Wholesale</a></li>
+            <li><a href="#">Interior Designers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h3>Stay Connected</h3>
+          <p>Sign up for our newsletter to get the latest news.</p>
+          <form class="newsletter">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter email address"
+            />
+            <input type="submit" value="Sign up" />
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li>&copy; 2020 Copyright Fluff Stuff</li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
