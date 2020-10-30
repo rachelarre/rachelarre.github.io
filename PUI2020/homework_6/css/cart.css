@@ -20,7 +20,8 @@
 .quantity-col {
   flex-basis: 400px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  background: aliceblue;
 }
 
 .price-col {

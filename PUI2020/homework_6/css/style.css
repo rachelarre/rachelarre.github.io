@@ -122,6 +122,11 @@ h3 {
   color: #000000;
 }
 
+.state:checked + .btn-outline-blk {
+  background-color: #5044d5;
+  color: white;
+}
+
 .btn-outline-qty {
   border: 1px solid #000000;
   border-radius: 4px;
