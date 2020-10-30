@@ -15,7 +15,7 @@
           <li class="nav-item"><a href="#">About</a></li>
           <li class="nav-item"><a href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a href="#">Collections</a></li>
-          <li class="nav-item"><a href="#">Pillow Builder</a></li>
+          <li class="nav-item"><a href="fluffme.html">Pillow Builder</a></li>
         </ul>
 
         <a href="index.html" class="logo">
@@ -25,7 +25,7 @@
         <ul class="nav-links-right">
           <li class="nav-item"><a href="#">Account</a></li>
           <li class="nav-item">
-            <a href="#"
+            <a href="cart.html"
               ><img src="assets/icon-shopping-cart.svg" alt="cart" />
               <span id="updateCart">Cart</span></a
             >
@@ -54,7 +54,7 @@
       <ul>
         <li><a class="" href="gallery.html">Shop</a></li>
         <li><a href="">></a></li>
-        <li><a href="">Floor</a></li>
+        <li><a href="" id="pillowType">Floor</a></li>
         <li><a href="">></a></li>
       </ul>
     </nav>
@@ -63,19 +63,40 @@
       <div class="filter-type">
         <h3>Color</h3>
         <div class="product-color">
-          <img src="assets/colors/RainyDay.png" alt="Rainy Day" />
-          <img src="assets/colors/MorningHaze.png" alt="Morning Haze" />
           <img
+            id="rd"
+            class="colorToggle"
+            src="assets/colors/RainyDay.png"
+            alt="Rainy Day"
+          />
+          <img
+            id="mh"
+            class="colorToggle"
+            src="assets/colors/MorningHaze.png"
+            alt="Morning Haze"
+          />
+          <img
+            id="as"
+            class="colorToggle"
             src="assets/colors/AfterSchoolSpecial.png"
             alt="After School Special"
           />
-          <img src="assets/colors/CozyDenim.png" alt="Cozy Denim" />
+          <img
+            id="cd"
+            class="colorToggle"
+            src="assets/colors/CozyDenim.png"
+            alt="Cozy Denim"
+          />
         </div>
       </div>
 
       <div class="product-description">
         <h1>Floor Pillow</h1>
-        <img src="assets/product_gallery/floor-after.png" alt="Floor Pillow" />
+        <img
+          id="product-image-lg"
+          src="assets/product_gallery/floor-after.png"
+          alt="Floor Pillow"
+        />
       </div>
 
       <div class="product-description">
@@ -91,34 +112,72 @@
             </div>
             <p>8 reviews</p>
           </div>
-          <p><span> Color </span> - After School Special</p>
-        </div>
-
-        <div class="details-block">
-          <p><span> Choose fill </span></p>
-          <div class="product-btns">
-            <a href="" class="btn-outline-blk spacing-8px">Duck Down</a>
-            <a href="" class="btn-outline-blk spacing-8px">Memory Foam</a>
-            <a href="" class="btn-outline-blk spacing-8px"
-              >Hypoallergenic poly-blend</a
-            >
+          <div class="product-detail-color">
+            <p><span> Color - </span></p>
+            <p id="pillowColor">After School</p>
           </div>
         </div>
+
+        <form class="details-block">
+          <p><span> Choose fill </span></p>
+
+          <div class="product-btns">
+            <!-- Duck Down Radio -->
+            <input
+              class="state"
+              type="radio"
+              id="duckdown"
+              value="Duck Down"
+              name="filltype"
+              checked="true"
+              hidden
+            />
+            <label for="duckdown" class="btn-outline-blk spacing-8px"
+              >Duck Down</label
+            >
+
+            <!-- Memory Radio -->
+            <input
+              class="state"
+              type="radio"
+              id="memoryfoam"
+              value="Memory Foam"
+              name="filltype"
+              hidden
+            />
+            <label for="memoryfoam" class="btn-outline-blk spacing-8px"
+              >Memory Foam</label
+            >
+
+            <!-- Hypo Allo Radio -->
+            <input
+              class="state"
+              type="radio"
+              id="polyblend"
+              value="Hypo-allergenic Poly Blend"
+              name="filltype"
+              hidden
+            />
+            <label for="polyblend" class="btn-outline-blk spacing-8px"
+              >Hypo-allergenic Poly Blend</label
+            >
+          </div>
+        </form>
 
         <div class="details-block">
           <p><span> Select quantity </span></p>
           <div class="product-quantity">
             <div class="btn-outline-qty">
-              <p><span>—</span></p>
-              <p>1</p>
-              <p><span>＋</span></p>
+              <p><span class="qty-minus">—</span></p>
+              <p id="qty">1</p>
+              <p><span class="qty-plus">＋</span></p>
             </div>
           </div>
         </div>
 
         <div class="details-block">
           <div class="product-btns">
-            <a href="builder.html" class="btn-fill btn-standard"
+            <a id="add-cart" class="btn-fill btn-standard"
               >Add pillow to cart</a
             >
           </div>
@@ -139,7 +198,7 @@
 
     <section class="additional-options">
       <div class="minicard minicard-options">
-        <a href="" class="">
+        <a href="bed-pillow.html" class="">
           <div class="minicard-image">
             <img
               src="assets/product_gallery/bed-after.png"
@@ -153,7 +212,7 @@
       </div>
 
       <div class="minicard minicard-options">
-        <a href="" class="">
+        <a href="round-pillow.html" class="">
           <div class="minicard-image">
             <img
               src="assets/product_gallery/round-morning.png"
@@ -167,7 +226,7 @@
       </div>
 
       <div class="minicard minicard-options">
-        <a href="" class="">
+        <a href="couch-pillow.html" class="">
           <div class="minicard-image">
             <img src="assets/product_gallery/couch-cozy.png" alt="" />
           </div>
