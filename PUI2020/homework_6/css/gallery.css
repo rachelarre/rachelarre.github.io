@@ -222,3 +222,68 @@
 .minicard-options {
   margin: 16px;
 }
+
+/* Fluff Me*/
+
+.fluff-gradient {
+  background: linear-gradient(-45deg, #f0eff7, #ffffff, #f3e8f2, #fafae9);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.fluff-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.focuscard {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 4px;
+  margin: 16px;
+  filter: contrast(100%);
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.focuscard-image {
+  margin: 16px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.focuscard-content {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 32px;
+  max-width: 400px;
+}
+
+.focuscard-content p {
+  display: flex;
+  margin: 0px 16px 16px 0px;
+}
+
+.focuscard-content form {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 32px;
+}

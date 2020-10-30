@@ -1,14 +1,35 @@
 // Final array to be passed to local storage
 const cart = [];
 
-function UpdateCartCount() {
-  let cartCount = 0;
+// blueprint for data to store in localstorage
+{
+  total: ###,
+  cart: [/* some stuff */]
+}
+
+function storeCartCount() {
+  let globalCart = cartCount();
+  localStorage.setItem(key, value)
+}
+
+function cartCount() {
+  let cartCount = 0; // accumulator
+  
+  // first check if cart exists in localstorage
+  // if it does, get the total number of items
 
   cart.forEach((item) => {
     cartCount = item.qty + cartCount;
   });
 
-  document.getElementById("updateCart").innerHTML = `Cart (${cartCount})`;
+  return cartCount;
+}
+
+UpdateCartCount();
+
+function UpdateCartCount() {
+  let cartNum = cartCount();
+  document.getElementById("updateCart").innerHTML = `Cart (${cartNum})`;
 }
 
 //Adding pillow selection to cart
@@ -17,7 +38,6 @@ let cartclick = document.getElementById("add-cart");
 cartclick.addEventListener("click", () => {
   createProduct();
   UpdateCartCount();
-  console.log("running", cart);
 });
 
 // Create pillow object for the cart
@@ -67,5 +87,3 @@ function manageQty() {
     document.getElementById("qty").innerHTML = qty;
   });
 }
-
-//just pass the objects to local storage you dont have to deal with incrementing
