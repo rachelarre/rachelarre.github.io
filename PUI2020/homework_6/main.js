@@ -1,44 +1,53 @@
 // Final array to be passed to local storage
 const cart = [];
+updateCartCount();
+addToCart();
 
-// blueprint for data to store in localstorage
-{
-  total: ###,
-  cart: [/* some stuff */]
+if (document.getElementById("qty")) {
+  manageQty();
 }
 
-function storeCartCount() {
-  let globalCart = cartCount();
-  localStorage.setItem(key, value)
+//Adding pillow selection to cart
+
+function addToCart() {
+  let cartClick = document.getElementById("add-cart");
+
+  if (cartClick) {
+    cartClick.addEventListener("click", () => {
+      createProduct();
+      storeCart();
+      updateCartCount();
+    });
+  }
 }
 
 function cartCount() {
-  let cartCount = 0; // accumulator
-  
-  // first check if cart exists in localstorage
-  // if it does, get the total number of items
+  let cartCount = 0;
 
-  cart.forEach((item) => {
+  let cartItems = localStorage.getItem("cart");
+
+  if (!cartItems) {
+    return cartCount;
+  }
+
+  cartItems = JSON.parse(cartItems);
+
+  cartItems.forEach((item) => {
     cartCount = item.qty + cartCount;
   });
 
   return cartCount;
 }
 
-UpdateCartCount();
-
-function UpdateCartCount() {
+function updateCartCount() {
   let cartNum = cartCount();
   document.getElementById("updateCart").innerHTML = `Cart (${cartNum})`;
 }
 
-//Adding pillow selection to cart
-let cartclick = document.getElementById("add-cart");
-
-cartclick.addEventListener("click", () => {
-  createProduct();
-  UpdateCartCount();
-});
+//Placing items into the cart
+function storeCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 // Create pillow object for the cart
 class Product {
@@ -65,7 +74,6 @@ function createProduct() {
 }
 
 //function to increment qty
-manageQty();
 function manageQty() {
   let qty = document.getElementById("qty").innerHTML;
   qty = parseInt(qty);

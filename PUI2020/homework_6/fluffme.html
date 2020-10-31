@@ -24,9 +24,9 @@
         <ul class="nav-links-right">
           <li class="nav-item"><a href="#">Account</a></li>
           <li class="nav-item">
-            <a href="cart.html">
-              <img src="assets/icon-shopping-cart.svg" alt="cart" />
-              Cart</a
+            <a href="cart.html"
+              ><img src="assets/icon-shopping-cart.svg" alt="cart" />
+              <span id="updateCart">Cart</span></a
             >
           </li>
         </ul>
@@ -50,9 +50,28 @@
             </p>
 
             <form>
-              I need a pillow for my ________________. Maybe with a
-              ______________ filling. Definitely a nice ____________ color. I’ll
-              need around ____ pilllows.
+              I need a pillow for my
+              <select name="pillows" id="pillows">
+                <option value="blank">&nbsp;</option>
+                <option value="couch">living room</option>
+                <option value="bed">bed room</option>
+                <option value="round">statement piece</option>
+                <option value="floor">floor</option></select
+              >. Maybe with a
+              <select name="filling" id="filling">
+                <option value="blank">&nbsp;</option>
+                <option value="down">soft and fluffy</option>
+                <option value="foam">firm and cool</option>
+                <option value="blend">clean and allergy free</option>
+              </select>
+              filling. The color should remind me of
+              <select name="colors" id="colors">
+                <option value="blank">&nbsp;</option>
+                <option value="mh">a morning haze</option>
+                <option value="rd">a rainy day</option>
+                <option value="as">an after school special</option>
+                <option value="cd">worn denim jacket</option></select
+              >.
             </form>
             <a href="fluffme.html" class="btn-outline">Fluff Me</a>
           </div>
