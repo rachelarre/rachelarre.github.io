@@ -1,7 +1,11 @@
 // Final array to be passed to local storage
-const cart = [];
+let cart = [];
+//localStorage.getItem("cart");
+//cart = JSON.parse(cart);
+
 updateCartCount();
 addToCart();
+//displayCart();
 
 if (document.getElementById("qty")) {
   manageQty();
@@ -23,7 +27,6 @@ function addToCart() {
 
 function cartCount() {
   let cartCount = 0;
-
   let cartItems = localStorage.getItem("cart");
 
   if (!cartItems) {
@@ -31,7 +34,6 @@ function cartCount() {
   }
 
   cartItems = JSON.parse(cartItems);
-
   cartItems.forEach((item) => {
     cartCount = item.qty + cartCount;
   });
@@ -95,3 +97,30 @@ function manageQty() {
     document.getElementById("qty").innerHTML = qty;
   });
 }
+
+// Loading Cart.html Display
+// function displayCart() {
+//   let cartItems = localStorage.getItem("cart");
+//   cartItems = JSON.parse(cartItems);
+//   let cartContainer = document.querySelector(".cart-container");
+//   console.log("Inside of display cart", cartItems);
+
+//   if (!cartItems && cartContainer) {
+//     cartContainer.innerHTML = `<div class="spacing-md"></div>
+
+//     <section class="section">
+//       <p class="cart label">You have nothing in your cart.</p>
+//     </section>
+
+//     <section class="display-col cart section spacing-mdflex">
+//       <p class="padding-16">Build a pillow with our custom pillow builder.</p>
+//       <a href="fluffme.html" class="btn-outline btn-standard">Fluff Me</a>
+//     </section>
+
+//     <div class="spacing-md"></div>
+
+//     <div class="cart-div"><hr class="border" /></div> `;
+//   } else {
+//     console.log("Items in cart");
+//   }
+// }
