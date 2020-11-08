@@ -10,7 +10,6 @@
 }
 
 .cart-container {
-  background: wheat;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,7 +21,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background: tomato;
 }
 
 .cart-div {
@@ -77,3 +75,9 @@
 }
 
 /* Quantity Col UI */
+.remove {
+  text-align: center;
+  font-weight: 600;
+  margin-left: 8px;
+  align-items: center;
+}
