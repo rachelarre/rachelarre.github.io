@@ -208,8 +208,7 @@
 
 .qty-plus:hover,
 .qty-minus:hover {
-  background: #53b5aa;
-  color: #fff;
+  background: #beb9e4;
   cursor: pointer;
 }
 
