@@ -5,10 +5,8 @@ cart = cart ? JSON.parse(cart) : [];
 updateCartCount();
 addToCart();
 
-if (document.getElementById("cart-container")) {
-}
-
-if (window.location.pathname == "/cart.html") {
+//run on only the cart page
+if (document.getElementsByClassName("cart-container")) {
   displayCart();
 }
 
