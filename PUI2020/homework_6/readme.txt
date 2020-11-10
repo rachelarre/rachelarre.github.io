@@ -1,8 +1,9 @@
 *Site Functionality*
+Post-Deadline Editing to fix conditonal display of cart function.
+
+*Site Functionality*
 Images toggle for each product page and all gallery elements are clickable but the image set is the same across all product pages
 If needed I can find new images but I figured just showing that it worked should be fine. 
-
-Cart does not work on github pages, you should probably run locally to view functionality, or run displayCart(); via console. 
 
 
 *Resources*
