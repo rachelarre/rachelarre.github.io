@@ -5,8 +5,11 @@ cart = cart ? JSON.parse(cart) : [];
 updateCartCount();
 addToCart();
 
+let cartContainer = document.getElementsByClassName(".cart-container");
+console.log(cartContainer);
+
 //run on only the cart page
-if (document.getElementsByClassName("cart-container")) {
+if (document.querySelector(".cart-container")) {
   displayCart();
 }
 
